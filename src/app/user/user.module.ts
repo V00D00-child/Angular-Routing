@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+
+import { UserRoutingModule } from './user-routing.module';
 
 import { LoginComponent } from './login.component';
 
@@ -8,10 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forChild([
-      { path: 'login', component: LoginComponent}
-
-    ])
+    UserRoutingModule
   ],
   declarations: [
     LoginComponent
