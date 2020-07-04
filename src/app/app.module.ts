@@ -27,6 +27,7 @@ import { RouterModule } from '@angular/router';
     ]),
     HttpClientModule,
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
+    // Imported routes are configured first
     ProductModule,
     UserModule,
     MessageModule
