@@ -5,13 +5,15 @@
 
   <div class="card-body"
        *ngIf="product"> 
-    <!-- diplay tab using child componets -->
+    <!-- diplay tab using child componets and add style to route when active-->
     <div class="wizard">
-      <a routerLink="info">
-        Basic Information
+      <a routerLink="info"
+         routerLinkActive="active">
+        Basic Information <span [ngClass]="{'fa fa-exclamation': !isValid('info')}"></span>
       </a>
-      <a routerLink="tags">
-        Search Tags
+      <a routerLink="tags"
+         routerLinkActive="active">
+        Search Tags <span [ngClass]="{'fa fa-exclamation': !isValid('tags')}"></span>
       </a>
     </div>
     <router-outlet></router-outlet>

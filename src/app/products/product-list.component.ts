@@ -14,6 +14,7 @@ export class ProductListComponent implements OnInit {
   imageMargin = 2;
   showImage = false;
   errorMessage = '';
+  loading = true;
 
   _listFilter = '';
   get listFilter(): string {
@@ -27,7 +28,11 @@ export class ProductListComponent implements OnInit {
   filteredProducts: Product[] = [];
   products: Product[] = [];
 
-  constructor(private productService: ProductService, private route: ActivatedRoute) { }
+  constructor(private productService: ProductService, private route: ActivatedRoute) {
+      if (this.products.length === 0 ) {
+        this.loading = true;
+      }
+   }
 
   ngOnInit(): void {
     // check for query parmas passed from previous page
@@ -38,6 +43,11 @@ export class ProductListComponent implements OnInit {
       next: products => {
         this.products = products;
         this.filteredProducts = this.performFilter(this.listFilter);
+
+        if (this.products.length >= 1 ) {
+          this.loading = false;
+        }
+
       },
       error: err => this.errorMessage = err
     });
