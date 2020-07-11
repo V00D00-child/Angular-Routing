@@ -48,7 +48,7 @@
             </td>
             <td>
               <!-- Go to product details page and retail filter by passing query params-->
-              <a [routerLink]="['/products', product.id]"
+              <a [routerLink]="[product.id]"
                  [queryParams]="{filterBy: listFilter, showImage: showImage}">
                 {{ product.productName }}
               </a>
@@ -63,7 +63,7 @@
             <td>
               <!-- Go to product edit page -->
               <button class="btn btn-outline-primary btn-sm"
-              [routerLink]="['/products', product.id, 'edit']">
+              [routerLink]="[product.id, 'edit']">
                 Edit
               </button>
             </td>

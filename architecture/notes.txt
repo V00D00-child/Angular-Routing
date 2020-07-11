@@ -1,0 +1,33 @@
+
+Child Routes: Configuring
+1. Add a childeren array to the parent route
+2. Define the child routes within that array
+3. Remember that child path exten the parent route
+
+Child Route: Placing/ Activating
+1. Place the child view by defining a RouterOutlet in the parent compoents template.
+Each child route will then appear in this location
+2. Every parent route compoent should have a router-outlet in its template
+3. Active route using an absolute path
+    -start with a slash
+    -Define each url segment
+4. Active route using an relative path
+    -No starting slash
+    -Only the child url segment
+
+Child Route:Obtaining Data
+1. Read the dat from the route 
+    - Snapshot
+    - Data Observable
+2. When reading data for child route that was resovled in the parent route
+make sure to specify that actived route parent
+
+
+Grouping routes/ Component-less Routes
+1. Define routes as childeren of ONE parent routes
+2. Specify relative paths
+3. Add a default path that troutes to the desired Component
+4. Remove the compoent from the parent Routes
+5. The child routes are diplayed in a higher-level outlet
+
+Styling, Animating, and Watching Routes
