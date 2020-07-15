@@ -3,7 +3,11 @@ import { RouterModule } from '@angular/router';
 import { MessageComponent } from './message.component';
 
 const ROUTES = [
-    { path: 'message', component: MessageComponent}
+    {
+        path: 'messages',
+        component: MessageComponent,
+        outlet: 'popup',
+    }
 ];
 
 @NgModule({

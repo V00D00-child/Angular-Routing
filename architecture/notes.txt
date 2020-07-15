@@ -30,4 +30,33 @@ Grouping routes/ Component-less Routes
 4. Remove the compoent from the parent Routes
 5. The child routes are diplayed in a higher-level outlet
 
-Styling, Animating, and Watching Routes
+Styling Routes
+1. Style the active route using the routerLinkActive directive
+2. Style the correct element
+3. For an exact path match use routerLinkActiveOptions
+
+Animating Routes
+1. Impoort BrowerAnimationModule
+2. Define the animation 
+3. Register the animation
+4. Trigger the animation on the router outlet
+
+Watching Events:Routes
+1. Enable tracing to watch routing event in the console
+2. Add enableTracing to the route configuration
+
+React Events:Routes
+1. Suscribe to the Router's events Observable
+2. Check the event type as needed
+
+Secondary Routes
+1. Add another RouterOutler within a template
+2. Set its name attribute to a unique name
+3. Add the outlet property to route defintion
+4. Set it to the name of the associated RouterOutlet
+5. Activate a secondary route using an object and setting its outlets property
+    -Key: Outlet name
+    -Value: Link parmeters array
+6. Clear a secondary route using an object and setting its outlets property
+    -Key: Outlet name
+    -Value: null
