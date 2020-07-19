@@ -1,4 +1,7 @@
 
+run in prod mode
+ng serve -o --prod
+
 Child Routes: Configuring
 1. Add a childeren array to the parent route
 2. Define the child routes within that array
@@ -61,5 +64,12 @@ Secondary Routes
     -Key: Outlet name
     -Value: null
 
-Route Guard
+Route Guard angular cli
 angular command: ng g g user/auth
+
+Building Route Guards
+1. Build a service
+2. Implement the guard type
+3. Create the associated function
+4. Add the guard to the desired route
+
