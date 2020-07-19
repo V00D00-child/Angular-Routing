@@ -60,3 +60,6 @@ Secondary Routes
 6. Clear a secondary route using an object and setting its outlets property
     -Key: Outlet name
     -Value: null
+
+Route Guard
+angular command: ng g g user/auth
